@@ -1,0 +1,33 @@
+---
+title: "SecondMarkdown"
+author: "Fernando Astorga"
+date: "September 23, 2018"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Main Topic
+## Supporting Arguments
+1. Reason 1
+2. Reason 2  
+2a. _Critical Detail_  
+2b. **Important Detail**
+3. Reason 3
+
+## In Conclusion
+
+## References
+![Figure 1] (http://www.google.com)
+
+$E = mc^2$
+
+```{r load_data}
+gapminder <- read.table("../Data/gapminder.txt")
+gapminder
+```
+[comment]: This line is a comment 
+[//]: This is also a comment
+[]:This is another comment

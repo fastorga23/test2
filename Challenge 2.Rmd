@@ -1,0 +1,66 @@
+---
+title: "Challenge 2"
+author: "Fernando Astorga"
+date: "September 23, 2018"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(ggplot2)
+```
+
+```{r load_data}
+gapminder <- read.table("../Data/gapminder.txt")
+gapminder
+
+# Subset Canada Only
+Canada <- myDataFull[myDataFull$country=="Canada",]
+
+my_plot <- ggplot(data = Canada, aes(x=year, y=lifeExp))+geom_line()
+my_plot
+
+```
+
+```{r working_of knitr, echo=false, results=hide}
+### Run this code in R to see graphic of how
+### your document gets rendered
+```par(mar=rep(0, 4), bty="n", cex=1.5)
+plot(0, 0, type="n", xlab="", ylab="", xaxt="n", yaxt="n",
+     xlim=c(0, 100), ylim=c(0, 100))
+xw <- 10
+yh <- 35
+xm <- 12
+ym <- 50
+rect(xm-xw/2, ym-yh/2, xm+xw/2, ym+yh/2, lwd=2)
+text(xm, ym, ".Rmd")
+
+xm <- 50
+ym <- 80
+rect(xm-xw/2, ym-yh/2, xm+xw/2, ym+yh/2, lwd=2)
+text(xm, ym, ".md")
+xm <- 50; ym <- 25
+for(i in c(2, 0, -2))
+    rect(xm-xw/2+i, ym-yh/2+i, xm+xw/2+i, ym+yh/2+i, lwd=2,
+         border="black", col="white")
+text(xm-2, ym-2, "figs/")
+
+xm <- 100-12
+ym <- 50
+rect(xm-xw/2, ym-yh/2, xm+xw/2, ym+yh/2, lwd=2)
+text(xm, ym, ".html")
+
+arrows(22, 50, 38, 50, lwd=2, col="slateblue", len=0.1)
+text((22+38)/2, 60, "knitr", col="darkslateblue", cex=1.3)
+
+arrows(62, 50, 78, 50, lwd=2, col="slateblue", len=0.1)
+text((62+78)/2, 60, "pandoc", col="darkslateblue", cex=1.3)
+```
+
+# InLine Code
+
+The average of the class is 44.0673946. 'r round(44.0673946,2)
+
+'''{r}
+
+

@@ -1,0 +1,36 @@
+---
+title: "FirstMarkdownDocument"
+author: "Fernando Astorga"
+date: "September 23, 2018"
+output: html_document
+---
+
+**Bold** - bold with double asterisks  
+_Italics_ -  Italics with underscores  
+`r` - Code with backticks
+
+# Title  
+## Main Section
+### Sub Section
+#### Sub-Sub Section
+
+- Item 1
+- Item 2
+- Item 3
+
+1. Item 1
+1. Item 2
+1. Item 3
+
+
+# InLine Code
+
+The average of the class is 44.0673946. `r round(44.0673946, 2)`
+
+
+```{r load_figure}
+gapminder <- show("../1504968109712.jpg")
+gapminder
+```
+
+The average of the class is 44.0673946. `r round(44.0673946, 2)`
